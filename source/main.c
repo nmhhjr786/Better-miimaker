@@ -11,8 +11,8 @@
 
 #include "buttons.h"
 
-WUPS_PLUGIN_NAME("Better Settings");
-WUPS_PLUGIN_DESCRIPTION("An aroma plugin that improves the System Settings user experience!");
+WUPS_PLUGIN_NAME("Better MiiMaker");
+WUPS_PLUGIN_DESCRIPTION("An aroma plugin that improves the miimaker user experience!");
 WUPS_PLUGIN_VERSION("v1.1");
 WUPS_PLUGIN_AUTHOR("Fangal");
 WUPS_PLUGIN_LICENSE("GPLv3");
@@ -20,7 +20,7 @@ WUPS_PLUGIN_LICENSE("GPLv3");
 #define MIRROR_SCREENS_CONFIG_ID "mirrorScreens"
 #define INPUT_REDIRECTION_CONFIG_ID "inputRedirection"
 
-WUPS_USE_STORAGE("Better_Settings");
+WUPS_USE_STORAGE("Better_Mii_Maker");
 
 bool mirrorScreens = true;
 bool inputRedirection = true;
@@ -63,11 +63,11 @@ void ConfigMenuClosedCallback() {
 
 INITIALIZE_PLUGIN() {
     WHBLogUdpInit();
-    WHBLogPrintf("Hola from Better Settings!");
+    WHBLogPrintf("Hola from Better Mii Maker");
 
-    sysTID = _SYSGetSystemApplicationTitleId(SYSTEM_APP_ID_SYSTEM_SETTINGS);
+    sysTID = _SYSGetSystemApplicationTitleId(SYSTEM_APP_ID_MII_MAKER);
 
-    WUPSConfigAPIOptionsV1 configOptions = {.name = "Better Settings"};
+    WUPSConfigAPIOptionsV1 configOptions = {.name = "Better Mii Maker"};
     if (WUPSConfigAPI_Init(configOptions, ConfigMenuOpenedCallback, ConfigMenuClosedCallback) != WUPSCONFIG_API_RESULT_SUCCESS) {
         WHBLogPrintf("Failed to init config api");
     }
