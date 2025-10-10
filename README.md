@@ -1,4 +1,4 @@
-# Better Settings
+# Mii Maker
 An aroma plugin that improves the Mii Maker user experience by adding support for viewing important info on the TV, and adding input support for Wii U Pro Controllers and Wii Classic Controllers!
 
 ＃warning
